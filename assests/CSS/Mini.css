@@ -1,0 +1,135 @@
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+
+.card.product-card {
+  width: 18rem;
+  height: 380px; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.card.product-card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #fff;
+  display: block;
+}
+
+
+.card.product-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.product-card .card-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card.product-card .card-text {
+  margin-bottom: 0.25rem;
+}
+
+.star-container { 
+  color: #f6c84c; 
+}
+
+
+.card.product-card .btn { 
+  align-self: center;
+}
+
+
+.mySwiper .swiper-slide { padding-bottom: 1rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p {
+  /* margin: 1.5em 0; */
+  color: #aaa;
+}
+
+/* img {
+  max-height: 50vh;
+} */
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #bbb;
+}
+
+.italic { font-style: italic; }
+.small { font-size: 0.8em; }
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 220px;
+  left: 220px;
+  right: 220px;
+  bottom: 220px;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(116, 107, 107, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
+
+
+
+
+
