@@ -13,6 +13,7 @@ async function initSlider() {
         else if (path.includes('mobile')) desiredCategory = 'Mobiles';
         else if (path.includes('headset')) desiredCategory = 'Headsets';
         else if (path.includes('laptop')) desiredCategory = 'Laptops';
+        else if (path.includes('login')) desiredCategory = 'login';
         else desiredCategory = null; // show all
     }
 
@@ -44,8 +45,8 @@ function displayCards(items, shownCategory){
 
         let imgSrc = (card.img || '').toString();
 
-        insert += `<div class="swiper-slide">
-                                                <div class="card product-card rounded-0">
+        insert += `<div class="swiper-slide pt-5">
+                                                <div class="card product-card rounded-0 pt-3 pb-2">
                                                         <div class="img-wrap">
                                                             <img src="${imgSrc}" class="card-img-top rounded-0" alt="${card.name}">
                                                         </div>
@@ -53,7 +54,10 @@ function displayCards(items, shownCategory){
                                 <h5 class="card-title">${card.name}</h5>
                                 <p class="card-text">₹ ${discountedPrice} <del>${price}</del> (${card.discount || ''})</p>
                                 <div class="star-container">${stars}</div>
-                                <button type="button" class="btn btn-primary border mt-2 mx-auto">VIEW</button>
+                                <div class="card-actions">
+                                <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn" data-name="${card.name}">Add to cart</button>
+                                <button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button>
+                                </div>
                             </div>
                         </div>
                     </div>`;
@@ -65,6 +69,111 @@ function displayCards(items, shownCategory){
 }
 // display data ends here
 
+
+
+
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["Laptops","Mobiles","Headsets","Dresses","oneplus","samsung","redmi","realme","boat","hp","dell","lenovo","asus","acer","oneplus nord buds","oneplus buds z2","boat airdopes 131","boat airdopes 141","boat airdopes 281","boat airdopes 441","boat rockerz 255f","boat rockerz 450","boat rockerz 510","boat rockerz 550","boat rockerz 600","boat rockerz 610","boat rockerz 650","boat rockerz 700","boat rockerz 750","boat rockerz 800","boat rockerz 810","boat rockerz 900 pro","samsung galaxy m14 5g","samsung galaxy m32","samsung galaxy m33 5g","samsung galaxy m53 5g","samsung galaxy f13","samsung galaxy f23 5g","samsung galaxy a14 5g","samsung galaxy a23 5g","redmi note 11t pro+5g","redmi note 11t pro","redmi note 11 pro+","redmi note 11 pro","redmi note 11","redmi note 10 pro max","redmi note 10 pro","redmi note 10","realme narzo 60x","realme narzo 60"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
 
 
 

@@ -15,10 +15,12 @@
     <nav class="navbar sticky-top bg-body-tertiary">
   <div class="container-fluid">
     <a href="/MiniProject/home.html" class="navbar-brand">AMAZON</a>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:300px;">
+              <input id="myInput" name="myCountry" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            </div>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
 
     
    <a href="/MiniProject/assests/Pages/cart.html"><i class="bi bi-cart"><strong>Cart</strong></i></a>
@@ -85,10 +87,119 @@
           </div>
     </div>
 
+    <div class="container cart-grid">
+
+<div class="row row-cols-1 row-cols-md-4 gap-5 g-4 " style=" padding-top: 0;padding-bottom: 50px;">
+    <div class="card product-card">
+     <!-- <div class="img-wrap"><img src="/MiniProject/assests/Images/Dresses/GoSriKi.png" class="card-img-top" alt="..."></div> -->
+      <div>
+     <a href="#img1">
+         <div class="img-wrap"><img src="/MiniProject/assests/Images/Dresses/GoSriKi.png" class="card-img-top" alt="..."></div>
+        
+        </a>
+
+        <!-- lightbox container hidden with CSS -->
+        <a href="" class="lightbox" id="img1" style="text-decoration: none;">
+          <span style="background-image: url('/MiniProject/assests/Images/Dresses/GoSriKi.png')"></span>
+          <!-- <h1 style="color: rgb(243, 240, 240); text-align: center; ;font-size:medium;">HeadSets</h1> -->
+        </a>
+        </div>
+      <div class="card-body">
+        <h5 class="card-title">Libsa kurthi</h5>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+        <div class="card-actions">
+          <a href="#" class="btn btn-outline-danger">Remove</a>
+          <a href="#" class="btn btn-success">Buy</a>
+        </div>
+      </div>
+   </div>
 
 
-    <div>
-  
+
+  <div class="card product-card">
+   <!-- <div class="img-wrap"><img src="/MiniProject/assests/Images/HeadSets/6.png" class="card-img-top" alt="..."></div> -->
+   <div>
+     <a href="#img2">
+         <div class="img-wrap"><img src="/MiniProject/assests/Images/Dresses/ANNI DESIGNER2.png" class="card-img-top" alt="..."></div>
+        
+        </a>
+
+        <!-- lightbox container hidden with CSS -->
+        <a href="" class="lightbox" id="img2" style="text-decoration: none;">
+          <span style="background-image: url('/MiniProject/assests/Images/Dresses/ANNI\ DESIGNER2.png')"></span>
+          <!-- <h1 style="color: rgb(243, 240, 240); text-align: center; ;font-size:medium;">HeadSets</h1> -->
+        </a>
+        </div>
+      <div class="card-body">
+        <h5 class="card-title">oneplus nord buds 2r</h5>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+        <div class="card-actions">
+          <a href="#" class="btn btn-outline-danger">Remove</a>
+          <a href="#" class="btn btn-success">Buy</a>
+        </div>
+      </div>
+  </div>
+
+  <div class="card product-card">
+   <!-- <div class="img-wrap"><img src="/MiniProject/assests/Images/laptops/4.png" class="card-img-top" alt="..."></div> -->
+   <div>
+     <a href="#img3">
+         <div class="img-wrap"><img src="/MiniProject/assests/Images/Dresses/LIBAS2.png" class="card-img-top" alt="..."></div>
+        
+        </a>
+
+        <!-- lightbox container hidden with CSS -->
+        <a href="" class="lightbox" id="img3" style="text-decoration: none;">
+          <span style="background-image: url('/MiniProject/assests/Images/Dresses/LIBAS2.png')"></span>
+          <!-- <h1 style="color: rgb(243, 240, 240); text-align: center; ;font-size:medium;">HeadSets</h1> -->
+        </a>
+        </div>
+    <div class="card-body">
+      <h5 class="card-title">hp pavilion</h5>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+      <div class="card-actions">
+        <a href="#" class="btn btn-outline-danger">Remove</a>
+        <a href="#" class="btn btn-success">Buy</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card product-card">
+   <!-- <div class="img-wrap"><img src="/MiniProject/assests/Images/Mobiles/3.jpg" class="card-img-top" alt="..."></div> -->
+   <div>
+     <a href="#img4">
+         <div class="img-wrap"><img src="/MiniProject/assests/Images/Dresses/KLOSIA.png" class="card-img-top" alt="..."></div>
+        
+        </a>
+
+        <!-- lightbox container hidden with CSS -->
+        <a href="" class="lightbox" id="img4" style="text-decoration: none;">
+          <span style="background-image: url('/MiniProject/assests/Images/Dresses/KLOSIA.png')"></span>
+          <!-- <h1 style="color: rgb(243, 240, 240); text-align: center; ;font-size:medium;">HeadSets</h1> -->
+        </a>
+        </div>
+    <div class="card-body">
+      <h5 class="card-title">oneplus nord CE 3</h5>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+      <div class="card-actions">
+        <a href="#" class="btn btn-outline-danger">Remove</a>
+        <a href="#" class="btn btn-success">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+ <div>
   <footer id="footer">
         <div class="container-fluid bg-dark p-5">
             <div class="row d-flex justify-content-center">
@@ -104,7 +215,7 @@
                         <a class='nav-link active h6 text-white text-decoration-none fw-semibold' href="home.html">Home</a>
                         <!-- <a class='nav-link h6 text-white text-decoration-none fw-semibold' href='/aboutus'>About Us</a> -->
                         <!-- <a class='nav-link h6 text-white text-decoration-none fw-semibold' href='/categories'>Catagarios</a> -->
-                        <a class='nav-link h6 text-white text-decoration-none fw-semibold' href='/cart'>Cart</a>
+                        <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="cart.html">Cart</a>
                         <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="login.html">Sign-in/Sign-up</a>
                     
                 </div>
