@@ -104,7 +104,7 @@
 * {
   box-sizing: border-box;
 }
-
+  
 body {
   font: 16px Arial;  
 }
@@ -132,6 +132,18 @@ input[type=submit] {
   color: #fff;
   cursor: pointer;
 }
+
+/* magnifier custom column widths: left 20%, center 40%, right 40% on md+ */
+@media (min-width: 768px) {
+  .magnifier-layout .col-left { width: 20%; float: left; }
+  .magnifier-layout .col-center { width: 40%; float: left; }
+  .magnifier-layout .col-right { width: 40%; float: left; }
+  .magnifier-layout .row { display: block; }
+  .magnifier-layout .thumb-list { display: flex; flex-direction: column; gap: 0.75rem; }
+}
+
+/* clear floats on container */
+.magnifier-layout:after { content: ""; display: table; clear: both; }
 
 .autocomplete-items {
   position: absolute;
@@ -215,9 +227,43 @@ input[type=submit] {
     }
 
 
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 20%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 150px;
+  height: 200px;
+}
+
+/* magnifier page layout */
+.magnifier-layout .thumb-list .thumb {
+  cursor: pointer;
+  width: 50%;
+  object-fit: cover;
+}
+.magnifier-layout .main-image {
+  max-width: 100%;
+  height: auto;
+}
+.magnifier-layout .thumb-list {
+  gap: 0.5rem;
+}
+
+/* @media (max-width: 767px) {
+  .img-magnifier-glass { width: 220px; height: 160px; }
+} */
 
 
-
-
+.bi-star-fill{
+  color: #f6c84c;
+}
 
 

@@ -55,23 +55,26 @@ function displayCards(items, shownCategory){
                                 <p class="card-text">₹ ${discountedPrice} <del>${price}</del> (${card.discount || ''})</p>
                                 <div class="star-container">${stars}</div>
                                 <div class="card-actions">
-                                <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn" data-name="${card.name}">Add to cart</button>
-                                <button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button>
+                                <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn">Add to cart</button>
+                                <a href="/MiniProject/assests/Pages/magnifier.html"><button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>`;
+                    console.log("hiii");
     });
 
     const container = document.getElementById('cards-container');
     if (container) container.innerHTML = insert;
     resetSwiper();
-}
-// display data ends here
+} 
 
 
 
 
+
+
+// autocomplete function starts here
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
