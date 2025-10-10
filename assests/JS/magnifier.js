@@ -54,6 +54,9 @@ function magnify(imgID, zoom) {
     /* Display what the magnifier glass "sees": */
     glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
   }
+    
+
+
 
   function getCursorPos(e) {
     var a = img.getBoundingClientRect();
@@ -93,3 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+  // modal logic ends here
+function modalContent(){
+let modal = document.getElementById("modal-body");
+let N=new bootstrap.Modal(modal);
+N.show();
+}

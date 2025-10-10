@@ -44,7 +44,7 @@
           <a class="nav-link" href="/MiniProject/index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/MiniProject/assests/Pages/dresses.html">Dresses</a>
+          <a class="nav-link" href="/MiniProject/assests/Pages/dresses.html">Clothing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="color: rgb(217, 218, 233); background-color: black;border-radius: 17px;"href="#" >HeadSets</a>
@@ -71,6 +71,27 @@
     </div>
   </div>
 </nav>
+
+
+<!-- modal starts here  -->
+   <div class="modal" id="modal-body" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">added to cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>item added to cart successfully</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/MiniProject/assests/Pages/cart.html"><button type="button" class="btn btn-primary">view cart</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- modal ends here  -->
 
 
 
@@ -107,11 +128,12 @@
         <!-- </a> -->
         </div>
       <div class="card-body">
-        <h5 class="card-title">Libsa kurthi</h5>
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+            <h4>Libsa kurthi</h4>
+            <span>&#8377 599 <del>1400</del> (45% off)</span>
+            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
         <div class="card-actions">
-          <a href="#" class="btn btn-outline-danger">Remove</a>
-          <a href="#" class="btn btn-success">Buy</a>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="#" class="btn btn-warning">Buy Now</a>
         </div>
       </div>
    </div>
@@ -133,11 +155,12 @@
         <!-- </a> -->
         </div>
       <div class="card-body">
-        <h5 class="card-title">oneplus nord buds 2r</h5>
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+            <h4>Libsa kurthi</h4>
+            <span>&#8377 599 <del>1400</del> (45% off)</span>
+            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
         <div class="card-actions">
-          <a href="#" class="btn btn-outline-danger">Remove</a>
-          <a href="#" class="btn btn-success">Buy</a>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="#" class="btn btn-warning">Buy Now</a>
         </div>
       </div>
   </div>
@@ -157,13 +180,14 @@
         <!-- </a> -->
         </div>
     <div class="card-body">
-      <h5 class="card-title">hp pavilion</h5>
-      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
-      <div class="card-actions">
-        <a href="#" class="btn btn-outline-danger">Remove</a>
-        <a href="#" class="btn btn-success">Buy</a>
+            <h4>Libsa kurthi</h4>
+            <span>&#8377 599 <del>1400</del> (45% off)</span>
+            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="#" class="btn btn-warning">Buy Now</a>
+        </div>
       </div>
-    </div>
   </div>
 
   <div class="card product-card">
@@ -181,13 +205,14 @@
         <!-- </a> -->
         </div>
     <div class="card-body">
-      <h5 class="card-title">oneplus nord CE 3</h5>
-      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
-      <div class="card-actions">
-        <a href="#" class="btn btn-outline-danger">Remove</a>
-        <a href="#" class="btn btn-success">Buy</a>
+            <h4>Libsa kurthi</h4>
+            <span>&#8377 599 <del>1400</del> (45% off)</span>
+            <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="#" class="btn btn-warning">Buy Now</a>
+        </div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -196,25 +221,33 @@
 
 
 
-<div style="object-fit:cover;">
-  <footer id="footer" class="mt-5">
+<footer id="footer" class="mt-5">
         <div class="container-fluid bg-dark p-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-3  text-white mt-3">
-                    <h4 class="text-white  mb-0" >Contact Us</h4>
-                    <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a>
-                    <p>Sell on Amazon <br> sell under amazon accelerator<br>protect and build your brand<br> advertise your products</p>
-                    
+                    <h4 class="text-white  mb-0" >Get to Know Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>About Amazon <br> Careers<br>Press Releases<br> Amazon Science</p> 
                 </div>
+
+                 <div class="col-md-3  text-white mt-3">
+                    <h4 class="text-white  mb-0" >Contact with Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>Facebook <br> Twitter<br>Instagram </p> 
+                </div>
+
+                 <div class="col-md-3  text-white mt-3">
+                    <h4 class="text-white  mb-0" >Make Money with Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>Sell on Amazon <br> sell under amazon accelerator<br>protect and build your brand<br st>Amazon Global Selling <br>Supply to Amazon <br>Become an Affiliate <br>Fulfilment by Amazon <br> advertise your products <br>AmazonPay on Merchants</p> 
+                </div>
+
                 <div class="col-md-3 mt-3">
                     <h4 class="text-white">Quick Links</h4>
-                    
-                        <a class='nav-link active h6 text-white text-decoration-none fw-semibold' href="/MiniProject/index.html">Home</a>
+                        <a class='nav-link active h6 text-white text-decoration-none fw-semibold' href="index.html">Home</a>
                         <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="assests/Pages/cart.html">Cart</a>
                         <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="/MiniProject/assests/Pages/login.html">Sign-in/Sign-up</a>
-                    
-                </div>
-                
+                </div> 
             </div>
             <div class="row">
                 <div class="col-md-12 text-center text-white">
@@ -223,7 +256,6 @@
             </div>
         </div>
     </footer> 
-</div>
 
     
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

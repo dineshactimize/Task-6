@@ -25,7 +25,34 @@ async function initSlider() {
 document.addEventListener('DOMContentLoaded', initSlider);
 
 
-
+// let productDetails = [];
+ 
+// async function initSlider() {
+//   const response = await fetch('/MiniProject/assets/JSON/Mini.json');
+//   productDetails = await response.json();
+ 
+//   // Get current page path
+//   const path = window.location.pathname.toLowerCase();
+ 
+//   // Simple category detection
+//   let category = null;
+//   if (path.includes('dresses')) category = 'Dresses';
+//   else if (path.includes('mobile')) category = 'Mobiles';
+//   else if (path.includes('headset')) category = 'Headsets';
+//   else if (path.includes('laptop')) category = 'Laptops';
+//   else category = null; // show all if nothing matches
+ 
+//   // Filter products by category (if any)
+//   const items = category
+//     ? productDetails.filter(p => p.category?.toLowerCase() === category.toLowerCase())
+//     : productDetails;
+ 
+//   // Show the products
+//   displayCards(items, category);
+// }
+ 
+// // Run when the page is ready
+// document.addEventListener('DOMContentLoaded', initSlider);
 
 
 // display data starts here
@@ -55,7 +82,7 @@ function displayCards(items, shownCategory){
                                 <p class="card-text">₹ ${discountedPrice} <del>${price}</del> (${card.discount || ''})</p>
                                 <div class="star-container">${stars}</div>
                                 <div class="card-actions">
-                                <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn">Add to cart</button>
+                                <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn" onclick="modalContent()">Add to cart</button>
                                 <a href="/MiniProject/assests/Pages/magnifier.html"><button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button></a>
                                 </div>
                             </div>
@@ -70,6 +97,12 @@ function displayCards(items, shownCategory){
 } 
 
 
+// modal logic ends here
+function modalContent(){
+let modal = document.getElementById("modal-body");
+let N=new bootstrap.Modal(modal);
+N.show();
+}
 
 
 

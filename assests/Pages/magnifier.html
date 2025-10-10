@@ -48,7 +48,7 @@
                         <a class="nav-link" href="/MiniProject/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/MiniProject/assests/Pages/dresses.html">Dresses</a>
+                        <a class="nav-link" href="/MiniProject/assests/Pages/dresses.html">Clothing</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/MiniProject/assests/Pages/headset.html">HeadSets</a>
@@ -76,6 +76,30 @@
                     </div>
                 </div>
     </nav>
+
+      <!-- modal starts here  -->
+   <div class="modal" id="modal-body" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">added to cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>item added to cart successfully</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="/MiniProject/assests/Pages/cart.html"><button type="button" class="btn btn-primary">view cart</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- modal ends here  -->
+
+
+
+
         <div class="container magnifier-layout">
             <div class="row align-items-start">
                 <div class="col-left col-12 mb-3">
@@ -104,7 +128,7 @@
                         </ul>
                        
                     
-                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-primary" onclick=" modalContent()">Add to Cart</button>
                         <button class="btn btn-success">Buy Now</button>
                         
                 </div>
@@ -113,25 +137,33 @@
 
 
 
-    <div style="object-fit:cover;">
-  <footer id="footer" class="mt-5">
+    <footer id="footer" class="mt-5">
         <div class="container-fluid bg-dark p-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-3  text-white mt-3">
-                    <h4 class="text-white  mb-0" >Contact Us</h4>
-                    <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a>
-                    <p>Sell on Amazon <br> sell under amazon accelerator<br>protect and build your brand<br> advertise your products</p>
-                    
+                    <h4 class="text-white  mb-0" >Get to Know Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>About Amazon <br> Careers<br>Press Releases<br> Amazon Science</p> 
                 </div>
+
+                 <div class="col-md-3  text-white mt-3">
+                    <h4 class="text-white  mb-0" >Contact with Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>Facebook <br> Twitter<br>Instagram </p> 
+                </div>
+
+                 <div class="col-md-3  text-white mt-3">
+                    <h4 class="text-white  mb-0" >Make Money with Us</h4>
+                    <!-- <a class="navbar-brand text-dark fw-bold" href="#" ><strong class="text-white">AMAZON</strong></a> -->
+                    <p>Sell on Amazon <br> sell under amazon accelerator<br>protect and build your brand<br st>Amazon Global Selling <br>Supply to Amazon <br>Become an Affiliate <br>Fulfilment by Amazon <br> advertise your products <br>AmazonPay on Merchants</p> 
+                </div>
+
                 <div class="col-md-3 mt-3">
                     <h4 class="text-white">Quick Links</h4>
-                    
-                        <a class='nav-link active h6 text-white text-decoration-none fw-semibold' href="/MiniProject/index.html">Home</a>
+                        <a class='nav-link active h6 text-white text-decoration-none fw-semibold' href="index.html">Home</a>
                         <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="assests/Pages/cart.html">Cart</a>
                         <a class='nav-link h6 text-white text-decoration-none fw-semibold' href="/MiniProject/assests/Pages/login.html">Sign-in/Sign-up</a>
-                    
-                </div>
-                
+                </div> 
             </div>
             <div class="row">
                 <div class="col-md-12 text-center text-white">
@@ -140,7 +172,6 @@
             </div>
         </div>
     </footer> 
-</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
