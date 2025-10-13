@@ -23,7 +23,7 @@
           <input id="myInput" name="myCountry" class="form-control me-2" type="search" placeholder="Search"
             aria-label="Search" />
         </div>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
 
       <a href="/MiniProject/assests/Pages/cart.html"><i class="bi bi-cart"><strong>Cart</strong></i></a>
@@ -76,23 +76,46 @@
   </nav>
 
 
-  <div class="container ">
-    <div class="row mt-5 ">
-      <div class="col-md-6">
-        <h2 class="text-center mt-4">Sign-up</h2>
 
-        <button class="btn btn-primary" onclick="signupForm()">Sign-up</button>
-        <div id="signupFormContainer"></div>
-      </div>
-      <div class="col-md-6">
-        <h2 class="text-center mt-4">Login</h2>
-        <button class="btn btn-primary" onclick="loginForm()">login</button>
-        <div id="loginFormContainer">
+<div style="padding-left: 45%;">
+    <!-- <a  class="btn btn-primary" onclick="signup()">Signup</a>
+    <a  class="btn btn-primary" onclick="login()">Login</a> -->
+</div><br>
+  <p id="data"></p>
+
+  
+
+  <div class="modal" id="modall" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thanks for registration </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
+        <div class="modal-body">
+          <div>
+            <h6>Give us ratting</h6>
+            <!-- <br /> -->
+            <span onclick="gfg(1)" class="star">★</span>
+            <span onclick="gfg(2)" class="star">★</span>
+            <span onclick="gfg(3)" class="star">★</span>
+            <span onclick="gfg(4)" class="star">★</span>
+            <span onclick="gfg(5)" class="star">★</span>
+            <!-- <h3 id="output">Rating is: 0/5</h3> -->
+          </div>
+          <div>
+            <h4>leave your feedback</h4>
+            <textarea name="" id=""></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">submit</button>
+        </div>
       </div>
     </div>
   </div>
+
 
 
 
@@ -144,7 +167,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <script src="../JS/Mini.js"></script>
+  <!-- <script src="../JS/Mini.js"></script> -->
   <script src="/MiniProject/assests/JS/login.js"></script>
 </body>
 
