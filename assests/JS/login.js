@@ -3,8 +3,10 @@ function signup(){
   const signupform = document.getElementById("data");
   signupform.innerHTML = `
   <div class="container">
+   
     <form id="customForm" class="needs-validation mx-auto" novalidate autocomplete="off" style="max-width:480px; background-color:rgb(99, 109, 114); margin:20px auto; padding:20px; border:1px solid #222; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-      <div class="mb-3">
+      <h1 class="text-center" >Sign-Up</h1>
+    <div class="mb-3">
         <label for="yourName" class="form-label">Your Name</label>
         <input type="text" class="form-control" id="yourName" name="yourName" placeholder="Enter your name">
         <div class="invalid-feedback" id="nameError">Please enter your name</div>
@@ -48,7 +50,8 @@ function login(){
   loginform.innerHTML = `
   <div class="container">
     <form id="customForm" class="needs-validation mx-auto" novalidate autocomplete="off" style="max-width:480px; background-color:rgb(99, 109, 114); margin:20px auto; padding:20px; border:1px solid #222; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-      <div class="mb-3">
+     <h1 class="text-center" >Log-in</h1> 
+    <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
         <div class="invalid-feedback" id="emailError">Please enter a valid email</div>

@@ -1,10 +1,11 @@
 
 let productDetails = [];
 // getting JSON data for the combined Mini page
-async function initSlider() {
-        const response = await fetch('/MiniProject/assests/JSON/Mini.json');
-        productDetails = await response.json();
-    
+ function initSlider() {
+        // const response = await fetch('../JSON/Mini.json');
+        // productDetails = await response.json();
+    productDetails=JSON.parse(details);
+    console.log('data is',productDetails);
     const urls = new URLSearchParams(window.location.search);
     let desiredCategory = urls.get('category');
     if (!desiredCategory) {
@@ -83,7 +84,7 @@ function displayCards(items, shownCategory){
                                 <div class="star-container">${stars}</div>
                                 <div class="card-actions">
                                 <button type="button" class="btn btn-primary border mt-2 mx-auto add-to-cart-btn" onclick="modalContent()">Add to cart</button>
-                                <a href="/MiniProject/assests/Pages/magnifier.html"><button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button></a>
+                                <a href="../Pages/magnifier.html"><button type="button" class="btn btn-warning border mt-2 mx-auto">View Details</button></a>
                                 </div>
                             </div>
                         </div>

@@ -321,3 +321,12 @@ input[type=submit] {
   color: rgb(24, 159, 14);
 }
 
+/* @media  (max-width:996px ){
+  #UL{
+    position: relative;
+    right: 0;
+  }
+} */
+ /* .nav-item{
+  font-size: smaller;
+ } */
